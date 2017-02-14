@@ -1,7 +1,6 @@
-﻿using System;
-using System.Linq;
-using CleanTableByTag.DbModels;
+﻿using CleanTableByTag.DbModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -15,7 +14,7 @@ namespace CleanTableByTag.steps
         [BeforeScenario()]
         public void BeforeScenario()
         {
-            this._bookService = new BookService();
+            this._bookService = new BookService();            
         }
 
         [Given(@"a book for registering")]
@@ -55,10 +54,9 @@ namespace CleanTableByTag.steps
     {
         public void Create(BookViewModel bookViewModel)
         {
-
             var book = new Book { ISBN = bookViewModel.ISBN, Name = bookViewModel.Name };
 
-            //production and testing project shouldn't use the same connection string 
+            //production and testing project shouldn't use the same connection string
             //it is just for sample code
             using (var dbcontext = new NorthwindEntitiesForTest())
             {

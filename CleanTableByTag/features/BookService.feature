@@ -1,6 +1,6 @@
 ﻿Feature: BookService
 
-
+@CleanBooks
 Scenario: Add the first book 
 	Given a book for registering
 	| ISBN          | Name  |
