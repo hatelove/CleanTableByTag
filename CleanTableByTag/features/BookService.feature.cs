@@ -81,7 +81,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Name"});
             table1.AddRow(new string[] {
                         "9789869094481",
-                        "玩出好創意"});
+                        "specification by example"});
 #line 5
  testRunner.Given("a book for registering", ((string)(null)), table1, "Given ");
 #line 8
@@ -92,7 +92,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Name"});
             table2.AddRow(new string[] {
                         "9789869094481",
-                        "玩出好創意"});
+                        "specification by example"});
 #line 9
  testRunner.Then("Book table should exist a record", ((string)(null)), table2, "Then ");
 #line hidden

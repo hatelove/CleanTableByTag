@@ -12,6 +12,7 @@ namespace CleanTableByTag.steps
     {
         private BookService _bookService;
 
+        [BeforeScenario()]
         public void BeforeScenario()
         {
             this._bookService = new BookService();
@@ -54,7 +55,16 @@ namespace CleanTableByTag.steps
     {
         public void Create(BookViewModel bookViewModel)
         {
-            throw new NotImplementedException();
+
+            var book = new Book { ISBN = bookViewModel.ISBN, Name = bookViewModel.Name };
+
+            //production and testing project shouldn't use the same connection string 
+            //it is just for sample code
+            using (var dbcontext = new NorthwindEntitiesForTest())
+            {
+                dbcontext.Books.Add(book);
+                dbcontext.SaveChanges();
+            }
         }
     }
 }
