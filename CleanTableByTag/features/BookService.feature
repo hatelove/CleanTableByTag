@@ -1,4 +1,4 @@
-﻿Feature: BookController
+﻿Feature: BookService
 
 
 Scenario: Add the first book 

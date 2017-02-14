@@ -85,13 +85,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="features\BookController.feature.cs">
+    <Compile Include="features\BookService.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BookController.feature</DependentUpon>
+      <DependentUpon>BookService.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="steps\BookControllerSteps.cs" />
+    <Compile Include="steps\BookServiceSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -102,9 +102,9 @@
     <None Include="DbModels\BookModel.edmx.diagram">
       <DependentUpon>BookModel.edmx</DependentUpon>
     </None>
-    <None Include="features\BookController.feature">
+    <None Include="features\BookService.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>BookController.feature.cs</LastGenOutput>
+      <LastGenOutput>BookService.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
